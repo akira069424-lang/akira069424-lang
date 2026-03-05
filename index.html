@@ -333,6 +333,29 @@ href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPlCAQAAABbNA+xAAAAIGNI
                 display: block;
                 padding: 10px 0;
             }
+        .text {
+  position: relative;
+  padding: 0 10px; /* 見た目調整用の余白 */
+  color: #000;
+  font-size: 60px;
+  background-color: #fff;
+}
+
+.text::before {
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  content: "";
+  background-color: #fff;
+  mix-blend-mode: difference; /* difference（差分） */
+  transition: 0.3s;
+}
+
+.text:hover::before {
+  width: 100%;
+}
+
     </style>
 </head>
 <body onload="loadData()">
@@ -433,12 +456,12 @@ href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPlCAQAAABbNA+xAAAAIGNI
         <h3>目次</h3>
         <nav>
             <ul>
-                <li><a href="#schedule">活動予定カレンダー</a></li>
-                <li><a href="#warmSection">あったかいんだから～</a></li>
-                <li><a href="#siryou-section">資料</a></li>
-                <li><a href="#printSection">印刷物</a></li>
-                <li><a href="#feedback">感想</a></li>
-                <li><a href="#news">リンクなど</a></li>
+                <li><a href="#schedule"  class="text">活動予定カレンダー</a></li>
+                <li><a href="#warmSection" class="text">あったかいんだから～</a></li>
+                <li><a href="#siryou-section" class="text">資料</a></li>
+                <li><a href="#printSection" class="text">印刷物</a></li>
+                <li><a href="#feedback" class="text">感想</a></li>
+                <li><a href="#news" class="text">リンクなど</a></li>
             </ul>
         </nav>
     </aside>
@@ -1148,4 +1171,5 @@ href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPlCAQAAABbNA+xAAAAIGNI
     </script>
 
 </body>
+
 </html>

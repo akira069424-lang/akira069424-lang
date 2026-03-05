@@ -337,7 +337,7 @@ href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPlCAQAAABbNA+xAAAAIGNI
   position: relative;
   padding: 0 10px; /* 見た目調整用の余白 */
   color: #000;
-  font-size: 60px;
+  font-size: 18px;
   background-color: #fff;
 }
 
@@ -351,9 +351,22 @@ href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPlCAQAAABbNA+xAAAAIGNI
   mix-blend-mode: difference; /* difference（差分） */
   transition: 0.3s;
 }
+        ul li {
+            padding-bottom: 10px;
+            padding-top: 10px;
+            background-color: #ffff;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+
 
 .text:hover::before {
   width: 100%;
+}
+aside{
+    background-color:#ffff;
 }
 
     </style>
